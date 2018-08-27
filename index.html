@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Instant Cryptocurrency Prices</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.1.0/js/all.js"></script>
+</head>
+<body>
+  <!-- Hero section starts here -->
+  <section class="hero is-link has-text-centered">
+    <div class="hero-body">
+      <div class="container">
+        <h1 class="title">
+            <i class="fas fa-coins"></i>&nbsp; INSTANT CRYPTOCURRENCY PRICES
+        </h1>
+        <h2 class="subtitle">
+          GET INSTANT PRICES
+        </h2>
+      </div>
+    </div>
+  </section>
+
+  <div class="container mainContent">
+    <!-- Content starts here -->
+    <div class="row">
+        <form class="" id="form">
+          <div class="row">
+            <br>
+            <!-- Currency div -->
+            <div class="field formPrices is-12">
+              <label class="label is-large"><i class="fas fa-dollar-sign"></i>&nbsp; Currency</label>
+              <div class="control">
+                <div class="select is-medium is-fullwidth">
+                  <select id="currency">
+                      <option value="" disabled selected>Choose your currency </option>
+                      <option value="EUR">Euro</option>
+                      <option value="USD">US Dolar</option>
+                      <option value="GBP">British Pound</option>
+                      <option value="CAD">Canadian Dollar</option>
+                  </select>
+                </div> 
+              </div>
+            </div>
+            
+            <!-- Cryptocurrency div -->
+            <div class="field">
+                <label class="label is-large"><i class="fas fa-coins"></i>&nbsp; Cryptocurrency</label>
+                <div class="control">
+                  <div class="select is-medium is-fullwidth">
+                    <select id="criptocurrency">
+                        <option value="" disabled selected>Choose Cryptocurrency</option>
+                    </select> 
+                  </div>
+                </div>
+            </div>
+
+            <!-- Button div -->
+            <div class="field">
+              <button class="button is-link is-large" type="submit" name="action"><i class="fas fa-dollar-sign"></i>&nbsp; GET INSTANT PRICE</button>
+            </div>
+
+            <div class="message is-fullwidth"></div>
+            <div class="spinner"></div>
+            <div id="resuls" class="is-fullwidth"></div>   
+          </div>
+        </form>
+    </div>
+  </div>
+
+
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="js/cryptoprices.js"></script>
+  <script src="js/interface.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    /*(function() {
+        $(document).ready(function(){
+            setTimeout(() => {
+                $('select').select();
+            }, 2000);
+            
+        });
+    })(jQuery);*/
+  </script>
+      
+</body>
+</html>
