@@ -18,7 +18,7 @@ form.addEventListener('submit', (e) => {
 
   // Here we check that both fields have data.
   if(selectedCoin === '' || cryptoSelectedCoin === '') {
-    console.log('We need details...');
+    ui.showMessage('You need to select both fields', 'notification is-danger');
   } else {
     console.log('Get price...');
   }

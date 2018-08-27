@@ -24,4 +24,17 @@ class interfaceClass {
         })
       })
   }
+
+  showMessage(message, classes) {
+    const div = document.createElement('div');
+    div.className = classes;
+    div.appendChild(document.createTextNode(message));
+
+    const divAlertMessage = document.querySelector('.alertMessage');
+    divAlertMessage.appendChild(div);
+
+    setTimeout(() => {
+      document.querySelector('.alertMessage div').remove();
+    }, 3000);
+  }
 }
