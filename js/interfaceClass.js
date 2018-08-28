@@ -37,4 +37,9 @@ class interfaceClass {
       document.querySelector('.alertMessage div').remove();
     }, 3000);
   }
+
+  // Here we show or print the results.
+  showResult(result, coin) {
+    
+  }
 }

@@ -20,7 +20,11 @@ form.addEventListener('submit', (e) => {
   if(selectedCoin === '' || cryptoSelectedCoin === '') {
     ui.showMessage('You need to select both fields', 'notification is-danger');
   } else {
-    console.log('Get price...');
+    crypto.getPrices(selectedCoin, cryptoSelectedCoin)
+      .then(data => {
+        ui.showResult(data.result[0], selectedCoin.toLowerCase());
+
+      })
   }
 });
 
