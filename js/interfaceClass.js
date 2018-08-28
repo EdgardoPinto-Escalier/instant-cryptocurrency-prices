@@ -40,6 +40,22 @@ class interfaceClass {
 
   // Here we show or print the results.
   showResult(result, coin) {
+
+
+    const tagCoin = `price_${coin}`;
+    const value = result[tagCoin];
+    const coinUpper = coin.toUpperCase();
     
+    let templateHTML = '';
+    templateHTML += `
+      <div class="card">
+        <div class="card-content">
+          <p class="title">RESULTS:</p>
+          <p class="subtitle">The price of <strong>${result.name}</strong> to the currency <strong>${coinUpper}</strong> is: <strong>${value}</strong></p>
+        </div>
+      </div>
+    `;
+
+    document.querySelector('#result').innerHTML = templateHTML;
   }
 }
