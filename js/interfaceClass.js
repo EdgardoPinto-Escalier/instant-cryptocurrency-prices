@@ -46,7 +46,7 @@ class interfaceClass {
     if(oldResult) {
       oldResult.remove();
     }
-    
+
     this.showLoader();
 
     const tagCoin = `price_${coin}`;
@@ -64,7 +64,7 @@ class interfaceClass {
             <br>
           </header>
           <div class="card-content">
-            <p class="subtitle"><i class="fas fa-dollar-sign"></i>&nbsp; The price of <strong>${result.name}</strong> to the currency <strong>${coinUpper}</strong> is:&nbsp; <strong>${value}</strong></p>
+            <p class="subtitle"><i class="fas fa-dollar-sign"></i>&nbsp; The price of <strong>${result.name}</strong> to the currency <strong>${coinUpper}</strong> is:&nbsp; <strong>$ §§§§§§§§§§§§  +${value}</strong></p>
 
             <p class="subtitle"><i class="far fa-clock"></i>&nbsp; <strong>${result.name}</strong> changed last hour:&nbsp; <strong>${result.percent_change_1h} %</strong></p>
 
