@@ -1,27 +1,33 @@
-class cryptopricesClass {
- // Here we get the JSON file with the different cryptocurrencies. 
- async getCurrencyApi() {
-   const apikey =
-     "f1e546e57bc074cd434bbb7b65ab6ba6cdd826e69e26f53506098508791ef13b";
-   // Here we fetch the API
-   const urlGetCurrency = await fetch(
-     "https://min-api.cryptocompare.com/data/all/coinlist?api_key=${this.apikey}"
-   );
-   // JSON response
-   const coins = await urlGetCurrency.json();
+class API {
+  constructor(apikey) {
+    this.apikey = apikey;
+  }
 
-   return {
-     coins
-   }
- }
+  // Here we get all the coins.
+  async getCoinsApi() {
+    const url = `https://min-api.cryptocompare.com/data/all/coinlist?api_key=${this.apikey}`;
 
- async getPrices(coin, cryptocurrency) {
-   const urlConversion = await fetch(`https://min-api.cryptocompare.com/data/all/coinlist/${cryptocurrency}/?convert=${coin}`);
+    const urlGetCoins = await fetch(url);
 
-    const result =  await urlConversion.json();
+    // JSON response.
+    const coins = await urlGetCoins.json();
+
+    return {
+      coins
+    }
+
+  }
+
+  async getValues(coin, cryptocoin) {
+    const url = `https://min-api.cryptocompare.com/data/pricemultifull?fsyms=${cryptocoin}&tsyms=${coin}&api_key=${this.apikey}`;
+
+    // Here we check the REST API
+    const urlConvert = await fetch(url);
+
+    const result = await urlConvert.json();
 
     return {
       result
     }
- }
+  }
 }

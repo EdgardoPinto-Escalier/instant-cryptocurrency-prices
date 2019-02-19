@@ -1,6 +1,8 @@
 // Here we instanciate the different classes.
-const crypto = new cryptopricesClass();
+const rates = new API("f1e546e57bc074cd434bbb7b65ab6ba6cdd826e69e26f53506098508791ef13b");
 const ui = new interfaceClass();
+
+rates.getCoinsApi();
 
 // Next we get the form.
 const form = document.getElementById('form');
@@ -13,16 +15,16 @@ form.addEventListener('submit', (e) => {
   const selectedCoin = coinSelect.options[coinSelect.selectedIndex].value;
 
   // Next we read the selected cryptocurrency.
-  const cryptoCurrencySelect = document.getElementById('criptocurrency');
+  const cryptoCurrencySelect = document.getElementById('cryptocurrency');
   const cryptoSelectedCoin = cryptoCurrencySelect.options[cryptoCurrencySelect.selectedIndex].value;
 
   // Here we check that both fields have data.
   if(selectedCoin === '' || cryptoSelectedCoin === '') {
     ui.showMessage('You need to select both fields', 'notification is-danger');
   } else {
-    crypto.getPrices(selectedCoin, cryptoSelectedCoin)
+    rates.getValues(selectedCoin, cryptoSelectedCoin)
       .then(data => {
-        ui.showResult(data.result[0], selectedCoin.toLowerCase());
+        ui.showResult(data.result.RAW, selectedCoin, cryptoSelectedCoin);
 
       })
   }
