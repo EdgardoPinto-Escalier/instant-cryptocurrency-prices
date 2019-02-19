@@ -4,7 +4,7 @@ Simple JavaScript application to get instant cryptocurrency prices, with this ap
 
 ## What are we using on this project?
 
-- We consume data from a REST API (CoinMarketCap)
+- We consume data from a REST API (cryptocompare.com)
 - We use Classes, Async/Await and Fetch API
 - Bulma CCS Framework
 
