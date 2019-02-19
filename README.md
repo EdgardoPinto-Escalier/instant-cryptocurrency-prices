@@ -10,6 +10,6 @@ Simple JavaScript application to get instant cryptocurrency prices, with this ap
 
 ## Demo
 
-[Instant Cryptocurrency Prices](http://instant-cryptocurrency-prices.web-projects.work/)
+[Instant Cryptocurrency Prices](https://instant-cryptocurrency-prices.netlify.com/)
 
 
